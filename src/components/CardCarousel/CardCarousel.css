@@ -1,0 +1,31 @@
+div.test {
+    background-color: #38e964;
+}
+
+div.slick-slide,
+div.slick-slide > div,
+div.slick-slide > div > div {
+    border-radius: 15px;
+    border: 2px solid white;
+    background-size: cover;
+    color: gray;
+    left: 5%;
+    right: 5%;
+}
+
+.slides {
+    position: relative;
+}
+.slides .slick-prev,
+.slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: black;
+}
+.slides .slick-prev {
+    left: 25px;
+}
+.slides .slick-next {
+    right: 25px;
+}
