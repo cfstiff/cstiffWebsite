@@ -40,8 +40,9 @@ do
   # Domain names follow the RFC1123 spec [a-Z] [0-9] [-]
   # The length is limited to 253 characters
   # https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax
-  DEPLOY_SUBDOMAIN=`echo "$DEPLOY_SUBDOMAIN_UNFORMATTED" | sed -r 's/[\/|\.]+/\-/g'`
-  if ["$DEPLOY_SUBDOMAIN" == "master"]
+  DEPLOY_SUBDOMAIN=`echo "$DEPLOY_SUBDOMAIN_UNFORMATTED" | gsed -r 's/[\/|\.]+/\-/g'`
+  echo $DEPLOY_SUBDOMAIN
+  if [ "$DEPLOY_SUBDOMAIN" == "master-branch" ]
   then
     DEPLOY_DOMAIN=http://cstiff.com
   else
