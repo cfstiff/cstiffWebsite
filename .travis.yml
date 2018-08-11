@@ -3,6 +3,8 @@ node_js:
     - 9
 os:
     - linux
+deploy:
+    - skip-cleanup: true
 after_success:
     - chmod ugo+x ./deploy.sh
     - ./deploy.sh
