@@ -44,7 +44,6 @@ do
   if ["$DEPLOY_SUBDOMAIN" == "master"]
   then
     DEPLOY_DOMAIN=http://cstiff.com
-  fi
   else
     DEPLOY_DOMAIN=http://${DEPLOY_SUBDOMAIN}-${REPO_NAME}-${REPO_OWNER}.cstiff.com
   fi
