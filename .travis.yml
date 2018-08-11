@@ -1,16 +1,14 @@
 language: node_js
 node_js:
-    - "stable"
-cache:
-    directories:
-        - node_modules
+    - 9
+os:
+    - linux
+install:
+    - npm install
 script:
-    - npm test
     - npm run build
 deploy:
-    provider: surge
-    skip_cleanup: true
-    domain: cstiff.com
-    project: ./build/
-on:
-    branch: master
+    - skip-cleanup: true
+after_success:
+    - chmod ugo+x ./deploy.sh
+    - ./deploy.sh
