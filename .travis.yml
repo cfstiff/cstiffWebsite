@@ -3,6 +3,10 @@ node_js:
     - 9
 os:
     - linux
+install:
+    - npm install
+script:
+    - npm run build
 deploy:
     - skip-cleanup: true
 after_success:
