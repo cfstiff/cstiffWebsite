@@ -41,7 +41,13 @@ do
   # The length is limited to 253 characters
   # https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax
   DEPLOY_SUBDOMAIN=`echo "$DEPLOY_SUBDOMAIN_UNFORMATTED" | sed -r 's/[\/|\.]+/\-/g'`
-  DEPLOY_DOMAIN=http://${DEPLOY_SUBDOMAIN}-${REPO_NAME}-${REPO_OWNER}.cstiff.com
+  if ["$DEPLOY_SUBDOMAIN" == "master"]
+  then
+    DEPLOY_DOMAIN=http://cstiff.com
+  fi
+  else
+    DEPLOY_DOMAIN=http://${DEPLOY_SUBDOMAIN}-${REPO_NAME}-${REPO_OWNER}.cstiff.com
+  fi
   surge --project ${DEPLOY_PATH} --domain $DEPLOY_DOMAIN;
   if [ "$TRAVIS_PULL_REQUEST" != "false" ]
   then
