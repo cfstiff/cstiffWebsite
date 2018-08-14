@@ -32,6 +32,14 @@
 }
 
 .jumbotron {
-    background-image: url("https://images.muralsyourway.com/media/catalog/product/cache/1/base/1200x/040ec09b1e35df139433887a97daa66f/b/9/b97120df52a9c2ccb0546fe8c72628cb.jpeg");
-    color: white;
+    background-image: url("./leaves-pattern.png");
+}
+
+.contactInfo {
+    overflow: visible;
+    top: 50px;
+}
+
+.personalInfo {
+    margin: 30px;
 }
