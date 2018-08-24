@@ -1,33 +1,10 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import {
-    Jumbotron,
-    Container,
-    Button,
-    Modal,
-    ModalHeader,
-    ModalBody,
-    ModalFooter
-} from "reactstrap";
+import { Jumbotron, Container, Button } from "reactstrap";
 
 import CardCarousel from "./components/CardCarousel/CardCarousel";
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            modal: false
-        };
-
-        this.handleLearnMore = this.handleLearnMore.bind(this);
-    }
-    handleLearnMore() {
-        this.setState({
-            modal: !this.state.modal
-        });
-    }
-
     render() {
         return (
             <div className="App">
@@ -56,14 +33,6 @@ class App extends Component {
                 </Jumbotron>
                 <p> This is some information about me </p>
                 <CardCarousel />
-
-                <Modal isOpen={this.state.modal} toggle={this.handleLearnMore}>
-                    <ModalHeader toggle={this.handleLearnMore}>
-                        {" "}
-                        Modal title{" "}
-                    </ModalHeader>
-                    <ModalBody> This is a modal</ModalBody>
-                </Modal>
             </div>
         );
     }
