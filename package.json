@@ -1,22 +1,18 @@
 {
-
     "name": "cstiff-website",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-      "ajv": "^6.5.2",
-    "jquery": "^3.3.1",
-
+        "ajv": "^6.5.2",
+        "jquery": "^3.3.1",
         "bootstrap": "^4.1.3",
         "react": "^16.4.2",
         "react-dom": "^16.4.2",
         "react-pdf": "^3.0.5",
         "react-scripts": "1.1.4",
-      "react-slick": "^0.23.1",
-
+        "react-slick": "^0.23.1",
         "reactstrap": "^6.3.1",
-      "slick-carousel": "^1.8.1"
-
+        "slick-carousel": "^1.8.1",
         "surge": "^0.20.1"
     },
     "scripts": {
@@ -31,5 +27,4 @@
         "gh-pages": "^1.2.0"
     },
     "homepage": "http://cstiff.com"
-
 }
