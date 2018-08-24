@@ -9,7 +9,7 @@ class App extends Component {
     }
 
     showResume() {
-        window.open("http://cstiff.com/cstiffResume");
+        window.open("CStiff_Resume.pdf");
     }
     render() {
         return (
