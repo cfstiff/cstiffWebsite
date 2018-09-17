@@ -1,0 +1,10 @@
+.modal-dialog {
+    max-height: 1000px;
+    max-width: 1009px;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1000px !important;
+    }
+}

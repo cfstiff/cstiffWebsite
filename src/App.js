@@ -1,12 +1,19 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import "./App.css";
 import { Jumbotron, Container, Button } from "reactstrap";
+import store from "./store/index";
+import { toggleModal } from "./actions/index";
 
 import CardCarousel from "./components/CardCarousel/CardCarousel";
+import ProjectInfoModal from "./components/projectInfoModal/projectInfoModal";
 
 class App extends Component {
     constructor(props) {
         super();
+
+        window.store = store;
+        window.toggleModal = toggleModal;
 
         this.showResume = this.showResume.bind(this);
     }
@@ -19,7 +26,6 @@ class App extends Component {
             <div className="App">
                 <Jumbotron fluid>
                     <Container fluid>
-
                         <h1 className="display-3">Coco Stiff</h1>
                         <p className="lead">
                             Senior at Harvey Mudd College - Computer Science
@@ -33,19 +39,20 @@ class App extends Component {
                     </Container>
                 </Jumbotron>
 
-                <CardCarousel />
-
                 <div className="personalInfo">
-                    <h5> About Me </h5>
+                    <h2> About Me </h2>
                     I'm a senior at Harvey Mudd college, with a major in
-                    Computer Science and a concentration in Politcal Science,
+                    Computer Science and a concentration in Political Science,
                     graduating in May 2019. My main interests lie in front end
                     development and embedded systems - however, at the end of
                     the day, I'm interested in projects that give me the ability
                     to affect and help other people.
                 </div>
+                <CardCarousel />
+                <br />
+                <br />
                 <div className="contactInfo">
-                    <h5> Contact Me </h5>
+                    <h2> Contact Me </h2>
                     <span>
                         Email: cstiff@hmc.edu
                         <br />
@@ -54,9 +61,12 @@ class App extends Component {
                         Github: cfstiff
                     </span>
                 </div>
+                <br />
+
+                <ProjectInfoModal />
             </div>
         );
     }
 }
 
-export default App;
+export default connect()(App);
