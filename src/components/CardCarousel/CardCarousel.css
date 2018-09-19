@@ -1,0 +1,24 @@
+.slides {
+    position: relative;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+.slides .slick-prev:before,
+.slides .slick-next:before {
+    color: gray;
+}
+.slides .slick-prev {
+    left: 5px;
+}
+.slides .slick-next {
+    right: 5px;
+}
+
+.slick-slide {
+    padding: 7px;
+}
